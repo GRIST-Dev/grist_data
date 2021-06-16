@@ -20,7 +20,9 @@ Raw data are organized in 1d (2d sphere), 2d (2d sphere+vertical) and 3d (2d sph
 
 Horizontal_interpolation
 --------------------------------------------------------------------------------
-One may display the unstructured data directly using NCL, this will exhibit certain mesh shape for coarse-resolution data; e.g., vorticity. Alternatively, one may use NCO and CDO to post-interpolate the unstructured data to a regular latitude-longitude mesh. To do so, see post.
+1. One may display the unstructured data directly using NCL.  
+2. One may use NCO and CDO to post-interpolate the unstructured data to a regular latitude-longitude mesh. To do so, see post.  
+3. One may directly fast-check the raw unstructured data using panoply on a map ('georeferenced Feature-Type'); for this, please first use 'nccopy' to convert the data format from CDF5 to e.g., NetCDF classic.  
 
 Vertical_interpolation
 --------------------------------------------------------------------------------
@@ -41,3 +43,4 @@ Processing_tools
 1. https://code.mpimet.mpg.de/projects/cdo/
 2. http://nco.sourceforge.net/
 3. http://www.ncl.ucar.edu/
+4. https://www.giss.nasa.gov/tools/panoply/

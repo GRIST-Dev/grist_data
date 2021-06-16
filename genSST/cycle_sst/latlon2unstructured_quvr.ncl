@@ -118,9 +118,9 @@ begin
         copy_VarMeta(sst_ug,sic_ug)
 
 ; modify sic data to be 0->1
-       sic_ug = sic_ug/100.
-       sic_ug = where(sic_ug.lt.0.,0.,sic_ug) ; no   sea ice
-       sic_ug = where(sic_ug.gt.1.,1.,sic_ug) ; full sea ice
+      ; sic_ug = sic_ug/100.
+      ; sic_ug = where(sic_ug.lt.0.,0.,sic_ug) ; no   sea ice
+      ; sic_ug = where(sic_ug.gt.1.,1.,sic_ug) ; full sea ice
 
        putnc1d(sst_ug,sic_ug,lato,lono,"sst","sic","realNoMissingNewSstSic."+year+".grist."+hres+".nc")
 
