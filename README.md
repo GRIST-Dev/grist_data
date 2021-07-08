@@ -30,11 +30,10 @@ GRIST uses a Dry-mass vertical coordinate, this implies that only the dry hydros
 
 Time_slice
 --------------------------------------------------------------------------------
-GRIST data do not have a time dimension for accumulation. Two time sampling intervals are supported:  
-(i) A user-defined frequency that generates data at every N steps (including average and instantaneous state);  
-(ii) Montly-mean output.  
-
-Currently, they can not be used simultaneously. For weather-forecast like applications, use N-step output; for long-term climate-modeling like applications, use monthly mean output, and do some selective restarts for intensive output.
+GRIST data do not have a time dimension for accumulation. Two time sampling intervals for history files are supported:  
+(i) A user-defined frequency that generates data at every N steps (including average and instantaneous state; h1 history);  
+(ii) Montly-mean output (h0 history).  
+Sampling intervals beyond h0 and h1 at one runtime (e.g., h2, h3) requires code extension.    
 
 One may use NCO for post-processing the data to desired time resolution: to add an unlimited time dimension and concatenate them together.
 
